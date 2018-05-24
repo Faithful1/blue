@@ -1,0 +1,22 @@
+.title-block {
+	padding-top: 75px;
+	padding-bottom: 75px;
+
+	p {
+		font-family: 'noway';
+		font-size: 22px;
+		line-height: 28px;
+		color: $rally-blue;
+		font-weight: 200;
+		text-align: center;
+		margin-bottom: 0px;
+		@include media-breakpoint-up(sm) {
+			font-size: 24px;
+			line-height: 30px;
+		}
+		@include media-breakpoint-up(lg) {
+			font-size: 32px;
+			line-height: 44px;
+		}
+	}
+}

@@ -1,0 +1,145 @@
+nav {
+	background: #fff;
+	z-index: 2000;
+	padding-top: 80px;
+	position: relative;
+
+	&.panel {
+    position: fixed;
+    right: -15.625em; /*left or right and the width of your navigation panel*/
+    width: 15.625em; /*should match the above value*/
+	}
+	&::after {
+		content:'';
+		width: 100%;
+		height: 100%;
+		background: red;
+	}
+	p {
+		margin-left: 50px;
+		font-size: 12px;
+		vertical-align: bottom;
+		position: absolute;
+		bottom: 36px;
+		color: #FF5722;
+	}
+	a.menu-close {
+		cursor: pointer;
+		font-family: 'Roboto';
+		font-weight: 200;
+		text-align: center;
+		display: block;
+		width: 32px;
+		height: 32px;
+		font-size: 24px;
+		color: $rally-grey;
+		transition: color 0.2s;
+		position: absolute;
+		right: 22px;
+		top: 46px;
+		&:hover {
+			color: $rally-teal;
+			text-decoration: none;
+		}
+	}
+	ul {
+		padding-left: 0px;
+
+		li {
+			list-style-type: none;
+
+			a {
+				font-family: 'noway';
+				font-weight: 400;
+				color: $rally-teal;
+				font-size: 24px;
+				transition: 0.2s;
+				text-transform: lowercase;
+				display: block;
+				background: rgba(35, 204, 176, 0);
+				padding-left: 50px;
+				&.small-link {
+					font-size: 16px;
+					font-weight: 200;
+				}
+				&.instagram, &.facebook {
+					display: inline-block;
+
+					svg {
+						height: 42px;
+						width: 42px;
+						path {
+							fill: $rally-teal;
+							transition: fill 0.2s;
+						}
+					}
+					&:hover {
+						background: none;
+
+						svg {
+							path {
+								fill: $rally-blue-text;
+							}
+						}
+					}
+				}
+				&.facebook {
+					padding-left: 10px;
+				}
+
+				&:hover {
+					color: $rally-blue-text;
+					text-decoration: none;
+					background: rgba(35, 204, 176, 0.05);
+				}
+			}
+
+			span {
+				height: 40px;
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+}
+.nav {
+	li {
+		a {
+			color: #fff;
+			font-family: 'noway';
+			font-weight: 200;
+			text-decoration: none;
+			text-transform: lowercase;
+			transition: color 0.3s;
+
+			&:hover {
+				color: #b9fff3;
+			}
+			&.current {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+.menu-link {
+	width: 42px;
+	height: 42px;
+	display: flex;
+	margin-left: auto;
+	justify-content: center;
+	align-items: center;
+
+	svg {
+		#mobile-nav {
+			fill: #ffffff;
+			transition: fill 0.2s;
+		}
+	}
+	&:hover {
+		svg {
+			#mobile-nav {
+				fill: $rally-teal;
+			}
+		}
+	}
+}

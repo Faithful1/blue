@@ -1,0 +1,46 @@
+.pagination {
+	a {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		vertical-align: middle;
+		height: 32px;
+		width: 32px;
+		text-align: center;
+		background: #fafafa;
+		transition: 0.2s;
+		border-radius: 4px;
+		color: #000;
+		border: 1px solid #fff;
+		&:hover {
+			color: $rally-teal;
+			text-decoration: none;
+			border-color: $rally-teal;
+		}
+		&.prev, &.next {
+			background: $rally-teal;
+			svg {
+				fill: #ffffff;
+			}
+			&:hover {
+				background: $rally-teal-hover;
+				border-color: #fff;
+			}
+		}
+		&.disabled {
+			background: #ebebeb;
+			svg {
+				fill: #cccccc;
+			}
+			&:hover {
+				border-color: #fff;
+			}
+		}
+		&.current {
+			border-color: $rally-teal;
+			&:hover {
+				color: #000;
+			}
+		}
+	}
+}

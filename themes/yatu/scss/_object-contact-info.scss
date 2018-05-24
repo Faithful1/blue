@@ -1,0 +1,52 @@
+.contactinfo {
+	margin-bottom: 30px;
+
+	@include media-breakpoint-up(md) {
+		margin-bottom: 0px;
+	}
+	p {
+		font-family: 'roboto';
+		color: $rally-blue-text;
+		font-size: 20px;
+		font-weight: 300;
+		margin-bottom: 0px;
+		strong {
+			font-weight: 600;
+		}
+		a {
+			color: $rally-blue-text;
+			&:hover {
+				color: $rally-teal;
+				text-decoration: none;
+			}
+		}
+	}
+	.social { margin-top: 16px;
+		a {
+			&.instagram, &.facebook {
+				display: inline-block;
+
+				svg {
+					height: 42px;
+					width: 42px;
+					path {
+						fill: $rally-blue-text;
+						transition: fill 0.2s;
+					}
+				}
+				&:hover {
+					background: none;
+
+					svg {
+						path {
+							fill: $rally-teal;
+						}
+					}
+				}
+			}
+			&.facebook {
+				padding-left: 10px;
+			}
+		}
+	}
+}
