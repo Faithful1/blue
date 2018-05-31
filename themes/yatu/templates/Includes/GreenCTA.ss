@@ -8,7 +8,7 @@
 				<div class="mailchimp" id="mc_embed_signup">
 					<form action="//rallystudents.us15.list-manage.com/subscribe/post?u=d592b07be736db0947774b787&amp;id=22e8a5ce04" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 						<div id="mc_embed_signup_scroll">
-							<label for="mce-EMAIL"><strong>We piloted in 2017.</strong> Yatu Equity provides Procurement and Supply of office Equipments, Stationeries, and Various Construction Materials</label>
+							<label for="mce-EMAIL"><strong>What we do:</strong>Yatu Equity is a Zambian company with core business ventures in Procurement and supply, Construction and IT services</label>
 
 							<div class="form-row justify-content-center">
 								<div class="col-12 col-sm-5 col-xl-4">
