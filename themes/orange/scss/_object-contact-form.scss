@@ -1,0 +1,72 @@
+.contactform {
+	form {
+		.middleColumn {
+			position: relative;
+		}
+		span {
+			font-size: 10px;
+			color: #ff5722;
+			background: none;
+			position: absolute;
+			height: initial;
+			bottom: 1px;
+			left: 20px;
+		}
+		label {
+			// I don't care right now that this sucks
+			display: none;
+		}
+		input, textarea {
+			margin-bottom: 8px;
+			font-family: 'Roboto';
+			width: 100%;
+			border-radius: 10px;
+			border: 1px solid $rally-teal;
+			padding: 12px 20px;
+			color: $rally-blue-text;
+			transition: 0.2s;
+			&:focus {
+				border: 1px solid $rally-teal-hover;
+			}
+			&:disabled {
+				background: #e4fffa;
+				color: #b0cad5;
+			}
+		}
+		input {
+			&.btn {
+				border-radius: 100px;
+				background: $rally-teal;
+				color: white;
+				font-size: 16px;
+				padding: 15px 20px;
+				&:hover {
+					background: $rally-teal-hover;
+					border-color: $rally-teal-hover;
+				}
+				&:disabled {
+					&:hover {
+						background: $rally-teal;
+						border-color: $rally-teal;
+					}
+				}
+			}
+		}
+		textarea {
+		}
+	}
+	p {
+		color: $rally-grey;
+		font-size: 14px;
+		text-align: center;
+		margin-bottom: 0px;
+	}
+	.fail {
+		height: 10px;
+		margin-top: 5px;
+		p {
+
+			color: #ff5722;
+		}
+	}
+}

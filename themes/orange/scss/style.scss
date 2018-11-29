@@ -1,0 +1,229 @@
+// Rally Students Sdn Bhd
+// rallystudents.com
+
+// Mixins
+@import 'fonts';
+@import 'functions';
+@import 'variables';
+@import 'breakpoints';
+@import 'hidden';
+
+// Colours
+$rally-teal: #22ccb0;
+$rally-teal-hover: #41f1d4;
+$rally-blue: #1a244e;
+$rally-blue-text: #20306f;
+$rally-light-teal: #e6f9f5;
+$rally-grey: #525252;
+$rally-engage-blue: #007FB2;
+
+// figure out what objects this is on and remove it, was going to be more useful
+// but clearly Ive only used this once..
+.right-padding-30 {
+	padding-right: 30px;
+}
+.left-padding-30 {
+	padding-left: 30px;
+}
+
+@import 'blog';
+@import 'object-hero';
+@import 'object-navigation';
+@import 'object-engage-blue';
+
+// this is applied from bigSlide.js on mobile nav open to a backrgound overlay
+.modal-backdrop {
+	background: $rally-blue-text;
+	&.show {
+		opacity: .7;
+	}
+}
+
+@import 'object-green-cta';
+@import 'object-title-block';
+
+@import 'object-contact-info';
+@import 'object-contact-form';
+
+.content {
+	background-image: linear-gradient(to top, rgba(255, 255, 255, 0.05), rgba(124, 181, 255, 0.1));
+	box-shadow: inset 0 3px 3px 0 rgba(0, 0, 0, 0.02);
+	span {
+		display: block;
+		height: 1px;
+		width: 100%;
+		background: rgba(88, 112, 206, 0.15);
+	}
+	.section {
+		padding-top: 75px;
+		padding-bottom: 75px;
+
+		text-align: center;
+		@include media-breakpoint-up(md) {
+			text-align: left;
+		}
+
+		.turf {
+			margin-bottom: 20px;
+		}
+		.terms-list {
+			p, li, h2 { text-align: left!important; }
+  		counter-reset: section;
+			h2 {
+				color: $rally-blue-text;
+				font-family: 'noway';
+				font-size: 20px;
+				&::before {
+				  counter-increment: section;
+				  content: counter(section) ". ";
+				  margin: 0 0.5em 0 0;
+				}
+			}
+			ol {
+			  counter-reset: clause;
+			  list-style: none outside none;
+			  text-indent: -2em;
+				li {
+					color: $rally-blue-text;
+				  counter-increment: clause;
+					&::before {
+						content: counter(section) "." counters(clause, ".") ". ";
+					  margin: 0 0.5em 0 0.5em;
+					}
+				}
+			}
+			ul {
+				text-indent: 0;
+				&.pre-list {
+					li {
+						list-style-type: lower-roman;
+					}
+				}
+				li {
+					color: $rally-blue-text;
+					list-style-type: lower-alpha;
+					&::before {
+						content: '';
+					}
+				}
+			}
+		}
+		.about-rally {
+			p {
+				&.section-title {
+					font-weight: 400;
+				}
+				font-weight: 200;
+				font-size: 18px;
+				text-align: center;
+			}
+			.about-info {
+			}
+			.about-team {
+				margin-top: 48px;
+				padding-top: 48px;
+				border-top: 1px solid rgba(34, 204, 176, 0.2);;
+				p.person {
+					margin-bottom: 0px;
+					font-size: 16px;
+					@include media-breakpoint-up(sm) {
+						font-size: 18px;
+					}
+					a {
+						color: $rally-blue-text;
+						text-decoration: underline;
+						&:hover {
+							color: $rally-teal;
+						}
+					}
+				}
+				ul {
+					list-style-type: none;
+					padding: 0px;
+					margin: 0px;
+				}
+				img {
+					width: 32px;
+					display: block;
+					margin-top: 32px;
+				}
+			}
+		}
+		p {
+			color: $rally-blue-text;
+			font-family: 'roboto', sans-serif;
+			padding-left: 10px;
+			padding-right: 10px;
+			@include media-breakpoint-up(sm) {
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+			&.section-title {
+				font-family: 'noway';
+				font-size: 24px;
+			}
+			&.title {
+				font-family: 'noway';
+				font-size: 24px;
+				text-align: center;
+				margin-bottom: 16px;
+				@include media-breakpoint-up(md) {
+					margin-bottom: 40px;
+				}
+			}
+			&.summary-title {
+				font-size: 24px;
+				@include media-breakpoint-up(sm) {
+					font-size: 40px;
+				}
+				font-family: 'noway';
+				font-weight: 200;
+				text-align: center;
+			}
+			&.emphasis {
+				font-size: 20px;
+			}
+			&.questions {
+				padding-top: 16px;
+				font-size: 18px;
+				border-top: 1px solid rgba(82, 82, 82, 0.20);
+				font-family: 'noway';
+				font-weight: 300;
+			}
+		}
+		a {
+			color: $rally-teal;
+			&:hover {
+				color: $rally-teal-hover;
+			}
+		}
+		.img-mobile {
+			display: block;
+			max-width: 320px
+		}
+		.mobile-illustration {
+			margin-top: 40px;
+		}
+		.project {
+			p {
+				text-align: center;
+			}
+		}
+		&.summary {
+			padding-top: 0px;
+		}
+		.btn {
+			box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.19);
+			background: white;
+			color: $rally-blue;
+			border-radius: 100px;
+			font-family: 'roboto', sans-serif;
+			font-weight: bold;
+			font-size: 16px;
+			cursor: pointer;
+		}
+	}
+}
+
+@import 'object-light-cta';
+@import 'object-footer';
