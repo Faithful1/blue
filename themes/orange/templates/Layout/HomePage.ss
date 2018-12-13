@@ -2,11 +2,11 @@
 	<div class="container">
 		<% include Navigation %>
 		<div class="row hero-content align-items-center justify-content-around">
-			<div class="col-sm-12 col-md-7">
+			<!-- <div class="hidden-xs hidden-sm col-md-3">
 				<h2>The Orange</h2>
 				<h3>Palm Company Limited Nigeria</h3>
-			</div>
-			<div class="hidden-xs hidden-sm col-md-3">
+			</div> -->
+			<div class="col-sm-12 col-md-7">
 				<img class="img-fluid" src="$ThemeDir/images/hero-phone.png" alt="Orange App" />
 			</div>
 		</div>
